@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const colorList = require('../data/colors');
+const colorList = require('../../data/colors');
 
 module.exports = {
 	name: 'uptime',
