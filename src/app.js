@@ -6,6 +6,7 @@ const { prefix, token } = require('./config.json');
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
+client.prefix = prefix;
 
 const commandFiles = fs.readdirSync('./src/commands').filter(file => file.endsWith('.js'));
 const eventFiles = fs.readdirSync('./src/events').filter(file => file.endsWith('.js'));
@@ -34,7 +35,7 @@ for (const file of eventFiles) {
 		client.once(event.name, (...args) => event.execute(...args, client));
 	}
 	else {
-		client.on(event.name, (...args) => event.execute(...args, client, prefix));
+		client.on(event.name, (...args) => event.execute(...args, client));
 	}
 }
 

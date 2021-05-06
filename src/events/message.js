@@ -1,9 +1,9 @@
 module.exports = {
 	name: 'message',
-	execute(message, client, prefix) {
-		if (!message.content.startsWith(prefix) || message.author.bot) return;
+	execute(message, client) {
+		if (!message.content.startsWith(client.prefix) || message.author.bot) return;
 
-		const args = message.content.slice(prefix.length).trim().split(/ +/);
+		const args = message.content.slice(client.prefix.length).trim().split(/ +/);
 		const commandName = args.shift().toLowerCase();
 
 		if (!client.commands.has(commandName)) return;
