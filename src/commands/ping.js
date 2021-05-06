@@ -4,7 +4,7 @@ const colorList = require('../data/colors');
 module.exports = {
 	name: 'ping',
 	description: 'Ping!',
-	execute(message, client) {
+	execute(message) {
 		const embed = new Discord.MessageEmbed()
 			.setColor(colorList.AQUA)
 			.setTitle('Pong 🏓')
