@@ -1,0 +1,7 @@
+{
+    "prefix": "!!",
+    "token": "your-token",
+    "secret": "your-secret",
+    "client_id": "your-client-id",
+    "api_keys": {}
+}
